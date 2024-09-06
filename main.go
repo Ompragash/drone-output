@@ -63,7 +63,7 @@ func main() {
 	}
 
 	// Write the JSON string to the environment variable using WriteEnvToFile
-	err = WriteEnvToFile("FILES_PATH", string(jsonData))
+	err = WriteEnvToFile("FILES_INFO", string(jsonData))
 	if err != nil {
 		fmt.Printf("Error writing to env: %v\n", err)
 		return
