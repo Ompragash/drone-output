@@ -30,6 +30,23 @@ func WriteEnvToFile(key, value string) error {
 }
 
 func main() {
+	// Get the current working directory
+	workingDir, err := os.Getwd()
+	if err != nil {
+		fmt.Printf("Error getting current working directory: %v\n", err)
+		return
+	}
+
+	// Write the current working directory to the environment file
+	err = WriteEnvToFile("CURRENT_WORKING_DIRECTORY", workingDir)
+	if err != nil {
+		fmt.Printf("Error writing current working directory to env: %v\n", err)
+		return
+	}
+
+	// Print the current working directory
+	fmt.Printf("Current working directory: %s\n", workingDir)
+
 	// Sample JSON data representing file details
 	files := []FileInfo{
 		{
@@ -69,5 +86,5 @@ func main() {
 		return
 	}
 
-	fmt.Println("Successfully wrote FILES_PATH to environment")
+	fmt.Println("Successfully wrote FILES_INFO and CURRENT_WORKING_DIRECTORY to environment")
 }
