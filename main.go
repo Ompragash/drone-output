@@ -87,6 +87,7 @@ func main() {
 	}
 
 	fmt.Println("Successfully wrote FILES_INFO and CURRENT_WORKING_DIRECTORY to environment")
+	fmt.Printf("DRONE_OUTPUT value: %s\n", os.Getenv("DRONE_OUTPUT"))
 	fmt.Println("Failing at exit")
 	os.Exit(1)
 }
