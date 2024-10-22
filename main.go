@@ -87,4 +87,6 @@ func main() {
 	}
 
 	fmt.Println("Successfully wrote FILES_INFO and CURRENT_WORKING_DIRECTORY to environment")
+	fmt.Println("Failing at exit")
+	os.Exit(1)
 }
