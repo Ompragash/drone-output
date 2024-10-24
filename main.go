@@ -88,4 +88,5 @@ func main() {
 
 	fmt.Println("Successfully wrote FILES_INFO and CURRENT_WORKING_DIRECTORY to environment")
 	fmt.Printf("DRONE_OUTPUT value: %s\n", os.Getenv("DRONE_OUTPUT"))
+	fmt.Printf("PLUGIN_ARTIFACT_FILE value: %s\n", os.Getenv("PLUGIN_ARTIFACT_FILE"))
 }
